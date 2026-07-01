@@ -127,7 +127,7 @@ You can check out the implementation in the [Interfaces Code](interfacess.cpp).
 
 ### Design of Notification Service: 
 <div align="center" >
-<img src="images/Interfaces.png" width="750" alt="NotificationService Architecture">
+<img src="images/Interfaces.png" width="600" alt="NotificationService Architecture">
 </div>
 
 
