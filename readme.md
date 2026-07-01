@@ -56,4 +56,12 @@ protected → Hidden from the outside world but available to derived classes, ma
 | **protected** | ✅          | ✅             | ❌           |
 | **private**   | ✅          | ❌             | ❌           |
 
-## 2.  
+## 2. Objects
+
+
+![Objects](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*N7SXTIKO-odpY6503ic8Dw.png)
+As explained above if your class is a blueprint then your object is nothing but just a real entity / instancec
+created from that blueprint. In simple words an object is a reusable copy of class For example, 
+we created a Car class in the previous section. That Car class only defines what 
+a car should have and what a car can do.
+
