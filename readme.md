@@ -19,3 +19,9 @@ you need to understand its core concepts. Because OOP is not only about creating
 
 It is about learning how to model real problems, manage complexity, reduce repeated code, 
 and avoid turning your codebase into a messy system that breaks every time you change something.
+
+I will be updating the file structure here properly but here in the first file we will go through building some of the very 
+fundamental OOP core concepts which are required if you've master LLD. 
+
+1. Classes: 
+    ![Classes](  https://miro.medium.com/v2/resize:fit:1100/format:webp/1*fQsjyCUBq9h_1wWqjZsrYw.png)
