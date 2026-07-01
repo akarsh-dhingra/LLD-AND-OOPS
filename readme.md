@@ -65,7 +65,7 @@ we created a Car class in the previous section. That Car class only defines what
 a car should have and what a car can do.
 
 
-Referring to ${objectss.cpp}
+You can check out the implementation in the [Objects Code](objectss.cpp).
 
 Here, car1, car2, and car3 are objects. All three objects are created from the same Car class. 
 But each object has its own values.
