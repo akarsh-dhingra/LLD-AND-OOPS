@@ -121,5 +121,6 @@ They send a message. So instead of writing different logic everywhere,
 we can create one common interface called NotificationService.
 
 
+![Interfaces](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*Hg509JlvVejhFJyoo063NA.png)
 
 
