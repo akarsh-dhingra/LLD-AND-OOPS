@@ -45,7 +45,9 @@ You need to create some objects out of them so that you can actually look for it
 Access modifiers determine who can access members of a class:
 
 public → Open to everyone; forms the class's external interface.
+
 private → Hidden implementation details; accessible only within the class.
+
 protected → Hidden from the outside world but available to derived classes, making it useful for inheritance.
 
 | Modifier      | Same Class | Derived Class | Outside Class |
