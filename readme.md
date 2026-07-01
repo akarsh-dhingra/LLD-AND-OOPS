@@ -95,6 +95,7 @@ We also want to define a common set of actions that different classes must follo
 That is where interfaces come in.
 
 ## 3. Interfaces
+![Interfaces](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*Hg509JlvVejhFJyoo063NA.png)
 
 Now here comes a bit of twist a note before we start studying for interview purposes cpp doesn't have 
 by default interfaces but but , Instead, interfaces are created using abstract classes with pure virtual functions. 
@@ -104,7 +105,7 @@ Because C++ natively supports multiple inheritance, a separate, dedicated "inter
 Now firstly understanding what interfaces are:
 
 An interface is like a contract or a written agreement, It tells a class what methods it must have
-,but it does not explain how those methods should work. In simple words, an interface says: “This class must provide these actions.”
+,but **it does not explain how those methods should work**. In simple words, an interface says: “This class must provide these actions.”
 
 Let's take a very simple example.
 
@@ -121,6 +122,7 @@ They send a message. So instead of writing different logic everywhere,
 we can create one common interface called NotificationService.
 
 
-![Interfaces](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*Hg509JlvVejhFJyoo063NA.png)
+
+You can check out the implementation in the [Interfaces Code](interfacess.cpp).
 
 
