@@ -57,11 +57,40 @@ protected → Hidden from the outside world but available to derived classes, ma
 | **private**   | ✅          | ❌             | ❌           |
 
 ## 2. Objects
-
-
 ![Objects](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*N7SXTIKO-odpY6503ic8Dw.png)
-As explained above if your class is a blueprint then your object is nothing but just a real entity / instancec
+
+As explained above if your class is a blueprint then your object is nothing but just a real entity / instance
 created from that blueprint. In simple words an object is a reusable copy of class For example, 
 we created a Car class in the previous section. That Car class only defines what 
 a car should have and what a car can do.
+
+
+Referring to ${objectss.cpp}
+
+Here, car1, car2, and car3 are objects. All three objects are created from the same Car class. 
+But each object has its own values.
+
+Each object works independently.
+
+If we increase the speed of car1, it will not change the speed of car2. 
+If car2 starts, it does not mean car3 has also started.
+
+They are separate objects created from the same class. 
+This is one of the most important ideas in OOP. A class gives the structure. 
+An object gives the real values.
+
+Think about a house blueprint again. 
+One blueprint can be used to build many houses. 
+But after building them, each house can have a different color, different owner, 
+different furniture, and different address. 
+In the same way, one class can create many objects, and every object can have its own data.
+Similar example can be taken for making a ticket booking system or a bank account opening system.
+
+So, classes and objects together help us keep related data and behavior in one clean place. 
+But in bigger applications, sometimes we do not only want to create objects. 
+We also want to define a common set of actions that different classes must follow. 
+That is where interfaces come in.
+
+
+
 
