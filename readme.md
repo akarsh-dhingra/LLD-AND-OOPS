@@ -101,21 +101,19 @@ by default interfaces but but , Instead, interfaces are created using abstract c
 Because C++ natively supports multiple inheritance, a separate, dedicated "interface" type category is completely unnecessary
 
 
-Now firstly understanding what interfaces are->
+Now firstly understanding what interfaces are:
 
 An interface is like a contract or a written agreement, It tells a class what methods it must have
-,but it does not explain how those methods should work. In simple words, an interface says: 
-
-“This class must provide these actions.”
+,but it does not explain how those methods should work. In simple words, an interface says: “This class must provide these actions.”
 
 Let's take a very simple example.
 
 Imagine we are building a notification system. In an app, we may need to send notifications in different ways:
 
-Email
-SMS
-WhatsApp
-Push notification
+1. Email
+2. SMS
+3. WhatsApp
+4. Push notification
 
 All of them are different, but they have one common job:
 
