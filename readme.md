@@ -28,6 +28,9 @@ fundamental OOP core concepts which are required if you've master LLD.
 ## 1. Classes: 
 ![Classes](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*fQsjyCUBq9h_1wWqjZsrYw.png)
 
+You can check out the implementation in the [Classes Code](classesss.cpp).
+
+
 A simple very basic real life example is of a car in a code, we can create a car class with some basic attributes like color,speed,brand etc.
 On top of that we can define some basic functions such as stop, accelerate, calculateSpeed etc as per what our useCases or business logic
 we've to serve for.
@@ -90,6 +93,34 @@ So, classes and objects together help us keep related data and behavior in one c
 But in bigger applications, sometimes we do not only want to create objects. 
 We also want to define a common set of actions that different classes must follow. 
 That is where interfaces come in.
+
+## 3. Interfaces
+
+Now here comes a bit of twist a note before we start studying for interview purposes cpp doesn't have 
+by default interfaces but but , Instead, interfaces are created using abstract classes with pure virtual functions. 
+Because C++ natively supports multiple inheritance, a separate, dedicated "interface" type category is completely unnecessary
+
+
+Now firstly understanding what interfaces are->
+
+An interface is like a contract or a written agreement, It tells a class what methods it must have
+,but it does not explain how those methods should work. In simple words, an interface says: 
+
+“This class must provide these actions.”
+
+Let's take a very simple example.
+
+Imagine we are building a notification system. In an app, we may need to send notifications in different ways:
+
+Email
+SMS
+WhatsApp
+Push notification
+
+All of them are different, but they have one common job:
+
+They send a message. So instead of writing different logic everywhere, 
+we can create one common interface called NotificationService.
 
 
 
