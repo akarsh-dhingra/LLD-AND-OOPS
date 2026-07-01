@@ -26,7 +26,7 @@ I will be updating the file structure here properly but here in the first file w
 fundamental OOP core concepts which are required if you've master LLD. 
 
 ## 1. Classes: 
-    <img src="https://miro.medium.com/v2/resize:fit:1100/format:webp/1*fQsjyCUBq9h_1wWqjZsrYw.png" alt="Classes" width="700">
+![description](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*fQsjyCUBq9h_1wWqjZsrYw.png)
 
 A simple very basic real life example is of a car in a code, we can create a car class with some basic attributes like color,speed,brand etc.
 On top of that we can define some basic functions such as stop, accelerate, calculateSpeed etc as per what our useCases or business logic
