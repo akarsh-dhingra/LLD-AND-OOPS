@@ -126,6 +126,6 @@ we can create one common interface called NotificationService.
 You can check out the implementation in the [Interfaces Code](interfacess.cpp).
 
 ### Design of Notification Service: 
-<img src="images/Interfaces.png" width="300" height="300" alt="NotificationService Architecture">
+<img src="images/Interfaces.png" width="300" alt="NotificationService Architecture">
 
 
