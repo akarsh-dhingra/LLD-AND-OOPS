@@ -26,6 +26,18 @@ class Email: public NotificationService{
         cout<<"Sending Email to"<<user<<":"<<msg<<endl;
     }
 };
+
+// Similarly now we can implement every single notificationProvider that we're 
+// going to onboard be it emal smm slack etc etc 
+class Whatsapp: public NotificationService{
+    public:
+   void sendMessage(string user,string msg)override{
+        cout<<"Sending Whatsappp to"<<user<<":"<<msg<<endl;
+    }
+};
+// But here comes the OG or the elephant in the room 
+
+
 int main() {
 
     return 0;
