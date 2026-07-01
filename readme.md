@@ -40,4 +40,18 @@ Similarly all the class in programming are simply blueprints and in order to use
 an order for 2 butter naan and 1 plate butter chicken you"ll have to create an order instance(or object) for it in your codebase
 You need to create some objects out of them so that you can actually look for it
 
+
+### Access Modifiers: 
+Access modifiers determine who can access members of a class:
+
+public → Open to everyone; forms the class's external interface.
+private → Hidden implementation details; accessible only within the class.
+protected → Hidden from the outside world but available to derived classes, making it useful for inheritance.
+
+| Modifier      | Same Class | Derived Class | Outside Class |
+| ------------- | ---------- | ------------- | ------------- |
+| **public**    | ✅          | ✅             | ✅           |
+| **protected** | ✅          | ✅             | ❌           |
+| **private**   | ✅          | ❌             | ❌           |
+
 ## 2.  
