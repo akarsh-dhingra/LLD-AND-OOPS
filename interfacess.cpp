@@ -36,7 +36,17 @@ class Whatsapp: public NotificationService{
     }
 };
 // But here comes the OG or the elephant in the room 
+class AlertManager {
+    private:
+    NotificationService *notificationService;
+    public:
+    AlertManager(NotificationService* service): notificationService(service){};
 
+        void sendAlert(string user) {
+        notificationService->sendMessage(user, "Your order has been shipped.");
+    }
+
+};
 
 int main() {
 

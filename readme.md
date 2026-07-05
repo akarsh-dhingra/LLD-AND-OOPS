@@ -130,4 +130,32 @@ You can check out the implementation in the [Interfaces Code](interfacess.cpp).
 <img src="images/Interfaces.png" width="600" alt="NotificationService Architecture">
 </div>
 
+# 💠 The 4 Pillars That Make OOP Powerful
+## 1. Encapsulation
+Encapsulation is one of the most important pillars of OOP. 
+In simple words, encapsulation means keeping data and methods together inside a class, 
+and not allowing other parts of the program to directly change the internal data.
+
+Taking an example of Bank Holder Account to Implement it [Encapsulation Code](encaps.cpp)
+
+BankAccount account = new BankAccount("Shivam", 5000);
+account.deposit(2000);
+account.withdraw(1000);
+System.out.println(account.getBalance());
+
+Now the class controls how the balance changes. If someone tries to deposit a negative amount, the
+class can reject it. If someone tries to withdraw more money than available, 
+the class can stop it. That is the main idea of encapsulation. 
+We hide the internal data and expose only safe methods to work with that data.
+
+This makes our code more secure, more controlled, and easier to maintain. 
+If tomorrow we want to add more rules, like minimum balance, transaction charges, or daily withdrawal limits, 
+we can add them inside the BankAccount class.The outside code does not need to know all these internal details. 
+It only uses simple methods like deposit(), withdraw(), and getBalance().
+
+So remember this simple line:
+
+Encapsulation protects the data by controlling how it is accessed and changed. 
+It hides the internal details of a class. But sometimes we do not only want to hide data. 
+We also want to hide unnecessary complexity from the user. That idea is called abstraction, and we will understand it next.
 
