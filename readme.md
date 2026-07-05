@@ -201,3 +201,9 @@ Abstraction hides complexity and shows only what is necessary.
 ### Encapsulation protects the internal data. Abstraction hides the internal process. 
 Both are related, but they solve different problems. Now, what if multiple classes share the same data and behavior? That is where inheritance comes in.
 
+## 3. Inheritance:
+
+Inheritance is another important concept in OOP. In simple words, inheritance means one class can take properties and methods from another class. 
+The class that gives the common code is called the parent class. The class that receives that code is called the child class. 
+This helps us avoid writing the same code again and again.
+
