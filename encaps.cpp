@@ -55,15 +55,7 @@ class BankAccount{
 };
 
 int main() {
-    fastio;
+    BankAccount *b1=new BankAccount("Akarsh",234);
+    cout<<b1->IFSCnumber<<endl;
     
-    int t; // number of test cases
-    cin >> t;
-    while (t--) {
-        
-        // Your code here
-        
-    }
-    
-    return 0;
 }
