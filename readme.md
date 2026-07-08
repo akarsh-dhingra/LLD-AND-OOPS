@@ -418,7 +418,7 @@ That stronger relationship is called composition
 ## 🔹composition
 
 <div align="center" >
-<img src="images/Composition.png" width="600" alt="Place Order Service">
+<img src="images/Composition.png" width="900" alt="Place Order Service">
 </div>
 
 
