@@ -376,27 +376,29 @@ If a school closes, the teachers do not disappear. They can join another school.
 but it does not fully control the life of the teachers. That is aggregation.
 
 
-Professor p1
-Professor p2
-Professor p3
 
-        ▲
-        ▲
-        ▲
+• Here’s a cleaner version:
 
-Department
+          +-------------+      +-------------+      +-------------+
+          | Professor p1|      | Professor p2|      | Professor p3|
+          +-------------+      +-------------+      +-------------+
+                ▲                    ▲                    ▲
+                |                    |                    |
+                |                    |                    |
+          +-----------------------------------------------+
+          |                  Department                   |
+          +-----------------------------------------------+
+          | p1 pointer                                    |
+          | p2 pointer                                    |
+          | p3 pointer                                    |
+          +-----------------------------------------------+
 
-+----------------+
-| p1 pointer     |
-| p2 pointer     |
-| p3 pointer     |
-+----------------+
+Here the profess object are created outside the department class. After that we 
+add them to the department class This is important. The department is not creating the prefessors internally,
+The profess already exist, and the department is only keeping a reference to them.
+That means profess can still exist even if the department object is removed. For example, the same profff can join another department 
+and may exist in anohter department as well.
 
-Here, the Teacher objects are created outside the School class. After that, we add them to the school. This is important. The school is not creating the teachers internally. The teachers already exist, and the school is only keeping a reference to them. That means teachers can still exist even if the school object is removed. For example, the same teacher can join another school:
-
-School anotherSchool = new School("Sunrise Public School");
-anotherSchool.addTeacher(teacher1);
-Here, teacher1 can be reused in another school. This shows that the teacher has its own independent life. That is the main idea of aggregation. The whole object has parts, but the parts can survive without the whole.
 
 Some more examples:
 
@@ -408,4 +410,9 @@ In all these examples, the smaller objects can still exist even if the bigger ob
 
 So remember this simple line:
 
-Aggregation means one object has another object, but the child object can still exist independently. In association, objects are just connected. In aggregation, one object has another object. But the ownership is still weak. Now what if the child object cannot exist without the parent object? That stronger relationship is called composition
+Aggregation means one object has another object, but the child object can still exist independently.
+In association, objects are just connected. In aggregation, one object has another object. 
+But the ownership is still weak. Now what if the child object cannot exist without the parent object?
+That stronger relationship is called composition
+
+
