@@ -285,7 +285,7 @@ This is called Function overriding or method overriding.
 Runtime polymorphism is more commonly used in real projects. 
 Let’s understand it with a simple example.
 
-Check out the code here at [Inheritance code](inheritance.cpp)
+Check out the code here at [Inheritance code](inheritiance.cpp)
 
 # 💠 Object Relationships: How Classes Work Together
 
@@ -414,5 +414,15 @@ Aggregation means one object has another object, but the child object can still 
 In association, objects are just connected. In aggregation, one object has another object. 
 But the ownership is still weak. Now what if the child object cannot exist without the parent object?
 That stronger relationship is called composition
+
+## 🔹composition
+
+<div align="center" >
+<img src="images/Composition.png" width="600" alt="Place Order Service">
+</div>
+
+
+
+
 
 
