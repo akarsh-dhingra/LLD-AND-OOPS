@@ -351,15 +351,15 @@ is called aggregation.
 
 Teacher Object
 
-+-----------+
-| Dr Sharma |
-+-----------+
+  +-----------+
+  | Dr Sharma |
+  +-----------+
 
-Student Object
+  Student Object
 
-+-----------+
-| Aakarsh   |
-+-----------+
+  +-----------+
+  | Aakarsh   |
+  +-----------+
 
 Student uses Teacher
 only during attendClass()
