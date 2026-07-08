@@ -421,8 +421,48 @@ That stronger relationship is called composition
 <img src="images/Composition.png" width="900" alt="Place Order Service">
 </div>
 
+Composition is a strong form of Aggregation that represents a Part-Of relationship. 
+In Composition, the lifecycle of the contained object depends completely on the container object.
+
+Composition is a "has-a" relationship where one object owns another object, 
+and the lifetime of the contained object depends on the owner.
+
+The key word here is ownership.If the owner is destroyed, the contained object is also destroyed.
+
+1. Represents a Part-Of relationship.
+2. Strong ownership exists between objects.
+3. Child objects cannot exist without the parent object.
+
+Imagine a House.A house has:
+1. Kitchen
+2. Bedroom
+3. Bathroom
+
+Ask yourself:
+
+Can a kitchen exist independently of the house (in this model)?
+
+No.
+
+If the house is demolished, the kitchen is also gone.This is Composition.
+
+House
+│
+├── Kitchen
+├── Bedroom
+└── Bathroom
+
+The house owns its rooms.
+
+Check out the CPP code Implementation [composition](Composition.cpp)
 
 
+https://medium.com/lets-code-future/12-core-oop-concepts-every-software-developer-should-understand-25dce173308f
+
+
+https://www.geeksforgeeks.org/java/association-composition-aggregation-java/
+https://www.geeksforgeeks.org/interview-prep/oops-interview-questions/
+https://www.geeksforgeeks.org/system-design/system-design-oops-core-principles-interview-questions/
 
 
 
