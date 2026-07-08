@@ -1,54 +1,62 @@
 #include <iostream>
-#include <vector>
-#include <algorithm>
-#include <string>
-#include <cmath>
-#include <map>
-#include <set>
-#include <queue>
-#include <stack>
 using namespace std;
 
-#define ll long long
-#define pb push_back
-#define all(x) (x).begin(), (x).end()
-#define fastio ios::sync_with_stdio(false); cin.tie(nullptr);
-
-class NotificationService{
-    public:
-    virtual void sendMessage(string user ,string message)=0;
+// Interface (Abstract Class)
+class NotificationService {
+public:
+    virtual void sendMessage(string user, string message) = 0;
+    virtual ~NotificationService() = default;
 };
 
-
-class Email: public NotificationService{
-    public:
-    void sendMessage(string user,string msg)override{
-        cout<<"Sending Email to"<<user<<":"<<msg<<endl;
+// Concrete Implementations
+class EmailNotification : public NotificationService {
+public:
+    void sendMessage(string user, string message) override {
+        cout << "Sending Email to " << user << ": " << message << endl;
     }
 };
 
-// Similarly now we can implement every single notificationProvider that we're 
-// going to onboard be it emal smm slack etc etc 
-class Whatsapp: public NotificationService{
-    public:
-   void sendMessage(string user,string msg)override{
-        cout<<"Sending Whatsappp to"<<user<<":"<<msg<<endl;
+class SMSNotification : public NotificationService {
+public:
+    void sendMessage(string user, string message) override {
+        cout << "Sending SMS to " << user << ": " << message << endl;
     }
 };
-// But here comes the OG or the elephant in the room 
+
+class WhatsAppNotification : public NotificationService {
+public:
+    void sendMessage(string user, string message) override {
+        cout << "Sending WhatsApp message to " << user << ": " << message << endl;
+    }
+};
+
+// Client Class
 class AlertManager {
-    private:
-    NotificationService *notificationService;
-    public:
-    AlertManager(NotificationService* service): notificationService(service){};
+private:
+    NotificationService* notificationService;
 
-        void sendAlert(string user) {
+public:
+    AlertManager(NotificationService* service)
+        : notificationService(service) {}
+
+    void sendAlert(string user) {
         notificationService->sendMessage(user, "Your order has been shipped.");
     }
-
 };
 
 int main() {
+    EmailNotification email;
+    SMSNotification sms;
+    WhatsAppNotification whatsapp;
+
+    AlertManager emailAlert(&email);
+    emailAlert.sendAlert("Aakarsh");
+
+    AlertManager smsAlert(&sms);
+    smsAlert.sendAlert("Rahul");
+
+    AlertManager whatsappAlert(&whatsapp);
+    whatsappAlert.sendAlert("Shivam");
 
     return 0;
 }

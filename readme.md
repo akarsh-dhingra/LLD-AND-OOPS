@@ -122,6 +122,17 @@ They send a message. So instead of writing different logic everywhere,
 we can create one common interface called NotificationService.
 
 
+### Pure Virtual Functions and Abstract Classes
+
+A pure virtual function is a virtual function with no implementation in the base class, declared using = 0. 
+A class with at least one pure virtual function is an abstract class that cannot be instantiated and serves 
+as a blueprint for derived classes, which must provide their own implementation.
+
+1. A class with at least one pure virtual function becomes an abstract class and Objects of abstract classes cannot be created directly.
+2. Abstract classes are used to define interfaces and ensure common structure among derived classes.
+3. Useful in polymorphism where different classes share the same interface but have different behaviors.
+4. A pure virtual function forces derived classes to override it.
+5. virtual void draw() = 0; declares a pure virtual function, forcing derived classes to provide their own implementation.
 
 You can check out the implementation in the [Interfaces Code](interfacess.cpp).
 
@@ -207,3 +218,194 @@ Inheritance is another important concept in OOP. In simple words, inheritance me
 The class that gives the common code is called the parent class. The class that receives that code is called the child class. 
 This helps us avoid writing the same code again and again.
 
+Let’s understand this with a simple real-world example.
+
+Think about different types of employees in a company. A company can have:
+
+full-time employees
+part-time employees
+interns
+All of them are employees.
+
+So they may have some common details:
+
+1. name
+2. employee ID
+3. department
+
+And they may have some common actions:
+show employee details
+calculate salary
+Instead of writing these common things again in every class, we can create one parent class called Employee. 
+Then other classes can inherit from it.
+
+But inheritance should be used carefully. Use inheritance only when there is a clear “is-a” relationship. For example:
+
+A full-time employee is an employee.An intern is an employee.
+
+A car is a vehicle.
+
+A dog is an animal.
+
+These are natural relationships. 
+But do not use inheritance only because you want to reuse some code. 
+If the relationship does not feel natural, inheritance can make the code confusing. 
+In that case, composition is usually a better option.
+
+So remember this simple line:
+
+Inheritance allows one class to reuse and extend the behavior of another class. 
+It helps us reduce repeated code when classes share a real parent-child relationship. 
+But what happens when different child classes have the same method name, but each one behaves differently? 
+That idea is called polymorphism, and we will understand it next.
+
+## 4. Polymorphism: 
+
+Polymorphism is one of those words that sounds difficult at first. But the idea is actually really really simple. 
+Polymorphism means many forms. In OOP, it means the same action can behave differently depending on the object that is using it
+
+Think about a payment system. In an app, users may pay using different methods:
+1. Credit Card
+2. UPI
+3. PayPal
+
+All payment methods have one common action i.e pay().
+But each payment method performs that action in its own way. 
+Credit card payment uses card details. UPI payment uses a UPI ID. 
+PayPal payment uses a PayPal account. The method name is the same, 
+but the behavior is different. That is polymorphism.
+
+There are mainly two types of Polymorphism: 
+1. Compile Time Polymorphism:
+This happens when we use the same method name with different parameters. This is also called method overloading.
+
+void sum(int a, int b) return a+b or void sum(int a ,int b, int c) return a+b+c;
+2. Run Time Polymorphism: 
+This is called Function overriding or method overriding.
+Runtime polymorphism is more commonly used in real projects. 
+Let’s understand it with a simple example.
+
+Check out the code here at [Inheritance code](inheritance.cpp)
+
+# 💠 Object Relationships: How Classes Work Together
+
+## 🔹Association
+![Assosciation](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*H8EbP6NDT4blEGubJKkEoA.png)
+
+Now let’s understand how objects are connected with each other. 
+The first relationship is called association. In very simple and fundamental terms assosciation means one object knows about another object
+.Both objects are connected, but they can still exist independently. One object does not fully own the other object. It's a has-a or what 
+you say as uses-a kind of relationship. Both classes can exist independently.
+
+Association is a relationship where one class uses or knows about another class.
+The key idea is that the two objects are independent. They can exist without each other.
+Let’s take a simple real-world example.
+
+Think about a teacher and a student. A teacher can teach many students. A student can learn from many teachers. 
+But both can exist separately. If one student leaves the class, the teacher still exists. If one teacher leaves the school, 
+the student can still learn from another teacher. So the relationship is there, but ownership is not strong.
+
+A student can exist without a particular teacher.
+A teacher can exist without a particular student.
+
+But they can still have a relationship:
+
+Student  -------- studies under --------> Teacher
+
+Neither owns the other.This is Association.
+
+In my code implementation [Assosciation](association.cpp)
+
+Here, Teacher and Student are two separate objects. The teacher object knows about the student objects. 
+But the students are not completely owned by the teacher. They are created separately. That means they 
+can exist even outside the Teacher class. This is the main point of association. Objects are connected, 
+but they are still independent.
+
+You can think of association like this
+
+A teacher teaches students.
+A doctor treats patients.
+A driver drives a car.
+A customer places an order.
+In all these examples, objects are related, but one object does not fully control the life of the other object.
+
+### Types of Association:
+1. One-to-One relation
+2. One-to-many relation
+3. Many-to-one relation
+4. Many-to-many relation
+
+There is more depth to it which we will cover later just google search types of assosciation in oops and read articles from gfg and scaler 
+then whenever you come back and have time.
+
+Unidirectional Association: One class knows about another, but not vice versa. Example: A Student has a LibraryCard, but the LibraryCard doesn't know about the Student.
+Bidirectional Association: Both classes know about and interact with each other. Example: A Teacher is assigned to a Classroom, and the Classroom knows its Teacher.
+
+
+So remember this simple line:
+
+Association means one object is connected to another object, but both can live independently. 
+Association is the most general relationship between objects. But sometimes, one object is not just connected to 
+another object. Sometimes, one object is a part of another object, but it can still exist separately. That relationship 
+is called aggregation.
+
+Teacher Object
+
++-----------+
+| Dr Sharma |
++-----------+
+
+Student Object
+
++-----------+
+| Aakarsh   |
++-----------+
+
+Student uses Teacher
+only during attendClass()
+
+
+## 🔹Aggregation
+
+![Aggregation](https://miro.medium.com/v2/resize:fit:1100/format:webp/1*TVZX4Wwx93_q9KAeQ0u85A.png)
+
+Let's understand this with a simple real-world example.
+
+Think about a school and teachers. A school has many teachers. But teachers can exist without that school. 
+If a school closes, the teachers do not disappear. They can join another school. So the school has teachers,
+but it does not fully control the life of the teachers. That is aggregation.
+
+
+Professor p1
+Professor p2
+Professor p3
+
+        ▲
+        ▲
+        ▲
+
+Department
+
++----------------+
+| p1 pointer     |
+| p2 pointer     |
+| p3 pointer     |
++----------------+
+
+Here, the Teacher objects are created outside the School class. After that, we add them to the school. This is important. The school is not creating the teachers internally. The teachers already exist, and the school is only keeping a reference to them. That means teachers can still exist even if the school object is removed. For example, the same teacher can join another school:
+
+School anotherSchool = new School("Sunrise Public School");
+anotherSchool.addTeacher(teacher1);
+Here, teacher1 can be reused in another school. This shows that the teacher has its own independent life. That is the main idea of aggregation. The whole object has parts, but the parts can survive without the whole.
+
+Some more examples:
+
+A department has employees.
+A library has books.
+A team has players.
+A school has teachers.
+In all these examples, the smaller objects can still exist even if the bigger object is removed.
+
+So remember this simple line:
+
+Aggregation means one object has another object, but the child object can still exist independently. In association, objects are just connected. In aggregation, one object has another object. But the ownership is still weak. Now what if the child object cannot exist without the parent object? That stronger relationship is called composition
